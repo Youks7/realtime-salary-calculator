@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>实时时薪计算器</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell" aria-live="polite">
+    <section id="workView" class="work-view">
+      <h1>实时时薪计算器</h1>
+
+      <form class="salary-form" autocomplete="off">
+        <label class="field">
+          <span>月收入（元）</span>
+          <input id="monthlyIncome" inputmode="decimal" type="number" min="0" step="0.01" value="5000">
+        </label>
+
+        <label class="field">
+          <span>合同工时（小时）</span>
+          <input id="contractHours" inputmode="decimal" type="number" min="0.1" step="0.1" value="8">
+        </label>
+
+        <p class="hint">请输入你的月收入和每天合同工时，用于计算实时时薪</p>
+      </form>
+
+      <section class="timer-block">
+        <p>今日已工作时长</p>
+        <div class="timer-row">
+          <output id="timer" class="timer timer-before">07:59:57</output>
+          <span class="status-dot" aria-hidden="true"></span>
+        </div>
+      </section>
+
+      <section class="actions" aria-label="工作控制">
+        <button id="pauseBtn" class="btn btn-pause" type="button">
+          <span aria-hidden="true">▶</span>
+          <span>开始工作</span>
+        </button>
+        <button id="finishBtn" class="btn btn-finish" type="button">
+          <span aria-hidden="true">■</span>
+          <span>结束工作</span>
+        </button>
+        <button id="fishBtn" class="btn btn-fish" type="button">
+          <span aria-hidden="true">☕</span>
+          <span>开始摸鱼</span>
+        </button>
+      </section>
+
+      <section class="rate-grid" aria-label="时薪数据">
+        <article class="metric">
+          <h2>8小时工作制时薪</h2>
+          <strong id="standardRate" class="money money-green">¥28.7356</strong>
+          <p>月收入 ÷ 21.75 ÷ 8小时</p>
+        </article>
+        <article class="metric metric-right">
+          <h2>当前真实时薪</h2>
+          <strong id="liveRate" class="money money-blue">¥28.7386</strong>
+          <p>未满合同工时按合同工时计算</p>
+        </article>
+      </section>
+    </section>
+
+    <section id="doneView" class="done-view" hidden>
+      <header class="done-hero">
+        <h1><span aria-hidden="true">🎉</span> 恭喜下班!</h1>
+        <p>今日工作已完成</p>
+      </header>
+
+      <section class="summary-list" aria-label="今日总结">
+        <article class="summary-item">
+          <p>今日工作时长</p>
+          <strong id="summaryDuration">8小时0分钟6秒</strong>
+        </article>
+
+        <article class="summary-item">
+          <p>8小时工作制时薪</p>
+          <strong id="summaryStandardRate" class="money-green">¥28.7356</strong>
+        </article>
+
+        <article class="summary-item">
+          <p>今日真实时薪</p>
+          <strong id="summaryLiveRate" class="money-blue">¥28.7296</strong>
+        </article>
+
+        <article class="summary-item summary-estimate">
+          <p>合同工时下预估月薪</p>
+          <span>计算方式：今日真实时薪 × 8小时 × 21.75天</span>
+          <strong id="summaryMonthly" class="money-green">¥4998.96</strong>
+        </article>
+      </section>
+
+      <section class="done-actions" aria-label="结果操作">
+        <button id="backBtn" class="btn btn-back" type="button">返回上一页</button>
+        <button id="newDayBtn" class="btn btn-new" type="button">新的一天</button>
+      </section>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
