@@ -1,5 +1,7 @@
 # Real-Time Hourly Wage Calculator
 
+## Chinese Version: [README.md](./README.md)
+
 A small static web app for tracking today's working time, calculating hourly wage, and generating an end-of-day work summary.
 
 Live site:
