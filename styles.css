@@ -1,0 +1,449 @@
+:root {
+  --text: #15191f;
+  --muted: #6d737d;
+  --soft: #f2f3f5;
+  --soft-line: #e6e8ec;
+  --blue: #174ea9;
+  --blue-strong: #064db8;
+  --green: #1f7f4a;
+  --orange: #c56f00;
+  --red: #b50926;
+  --purple: #3f22b8;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", Arial, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(100%, 980px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 118px 72px 72px;
+}
+
+.work-view h1 {
+  margin: 0 0 138px;
+  text-align: center;
+  font-size: 3.25rem;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.salary-form {
+  display: grid;
+  gap: 34px;
+}
+
+.field {
+  display: grid;
+  gap: 18px;
+}
+
+.field span {
+  color: #252b33;
+  font-size: 2.08rem;
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+.field input {
+  width: 100%;
+  height: 86px;
+  border: 1px solid var(--soft-line);
+  border-radius: var(--radius);
+  background: var(--soft);
+  color: #20242b;
+  padding: 0 52px;
+  font-size: 2rem;
+  outline: none;
+}
+
+.field input:focus {
+  border-color: #c9d4e7;
+  box-shadow: 0 0 0 3px rgba(23, 78, 169, 0.08);
+}
+
+.hint {
+  margin: 0;
+  color: #424952;
+  font-size: 1.48rem;
+  line-height: 1.45;
+}
+
+.timer-block {
+  margin-top: 126px;
+  text-align: center;
+}
+
+.timer-block p {
+  margin: 0 0 24px;
+  color: #4d535b;
+  font-size: 2.05rem;
+  line-height: 1.15;
+}
+
+.timer-row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 136px;
+}
+
+.timer {
+  color: var(--blue);
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+  font-size: 7.65rem;
+  line-height: 1;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.timer-after {
+  color: var(--red);
+}
+
+.status-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(181, 9, 38, 0.85);
+  transform: translate(28px, -12px);
+  flex: 0 0 auto;
+}
+
+.actions {
+  width: 100%;
+  max-width: 690px;
+  margin: 54px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 50px;
+}
+
+.btn {
+  border: 0;
+  border-radius: var(--radius);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: none;
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:hover {
+  filter: brightness(1.04);
+}
+
+.btn-pause,
+.btn-finish {
+  height: 82px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  font-size: 1.85rem;
+}
+
+.btn-pause {
+  background: var(--orange);
+}
+
+.btn-finish {
+  background: var(--red);
+}
+
+.btn-fish {
+  grid-column: 1 / -1;
+  height: 76px;
+  background: var(--purple);
+  font-size: 1.88rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.rate-grid {
+  margin-top: 122px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 78px;
+}
+
+.metric h2,
+.summary-item p {
+  margin: 0;
+  color: #616872;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.money,
+.summary-item strong {
+  display: block;
+  margin-top: 18px;
+  font-size: 3rem;
+  line-height: 1.08;
+  font-weight: 900;
+}
+
+.metric p {
+  margin: 18px 0 0;
+  color: #8a8f98;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.metric-right {
+  text-align: center;
+}
+
+.money-green {
+  color: var(--green);
+}
+
+.money-blue {
+  color: var(--blue);
+}
+
+.money-red {
+  color: var(--red);
+}
+
+.done-view {
+  padding-top: 145px;
+}
+
+.done-hero {
+  text-align: center;
+  margin-bottom: 170px;
+}
+
+.done-hero h1 {
+  margin: 0;
+  font-size: 4.3rem;
+  line-height: 1.08;
+  font-weight: 900;
+}
+
+.done-hero p {
+  margin: 20px 0 0;
+  color: #737983;
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+.summary-list {
+  display: grid;
+  gap: 66px;
+}
+
+.summary-item strong {
+  color: var(--text);
+  font-size: 3.45rem;
+}
+
+.summary-item .money-green,
+.summary-item .money-blue {
+  font-size: 3.3rem;
+}
+
+.summary-estimate {
+  margin-top: 84px;
+  border-top: 1px solid var(--soft-line);
+  padding-top: 54px;
+}
+
+.summary-estimate span {
+  display: block;
+  margin-top: 16px;
+  color: #7d838c;
+  font-size: 1.55rem;
+  line-height: 1.35;
+}
+
+.summary-estimate strong {
+  margin-top: 42px;
+}
+
+.done-actions {
+  width: min(100%, 620px);
+  margin: 90px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+}
+
+.done-actions .btn {
+  height: 86px;
+  font-size: 1.85rem;
+}
+
+.btn-back {
+  background: var(--blue-strong);
+}
+
+.btn-new {
+  background: #087b42;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    padding: 54px 22px 48px;
+  }
+
+  .work-view h1 {
+    margin-bottom: 72px;
+    font-size: 2.35rem;
+  }
+
+  .salary-form {
+    gap: 24px;
+  }
+
+  .field span {
+    font-size: 1.45rem;
+  }
+
+  .field input {
+    height: 58px;
+    padding: 0 22px;
+    font-size: 1.35rem;
+  }
+
+  .hint {
+    font-size: 1.02rem;
+  }
+
+  .timer-block {
+    margin-top: 72px;
+  }
+
+  .timer-block p {
+    font-size: 1.35rem;
+  }
+
+  .timer {
+    font-size: 4rem;
+  }
+
+  .status-dot {
+    width: 15px;
+    height: 15px;
+    transform: translate(12px, -8px);
+  }
+
+  .actions {
+    margin-top: 34px;
+    gap: 12px 16px;
+  }
+
+  .btn-pause,
+  .btn-finish,
+  .btn-fish {
+    height: 54px;
+    font-size: 1.05rem;
+    gap: 10px;
+  }
+
+  .rate-grid {
+    margin-top: 64px;
+    gap: 24px;
+  }
+
+  .metric h2,
+  .summary-item p {
+    font-size: 1rem;
+  }
+
+  .money,
+  .summary-item strong,
+  .summary-item .money-green,
+  .summary-item .money-blue {
+    font-size: 1.9rem;
+  }
+
+  .metric p,
+  .summary-estimate span {
+    font-size: 0.88rem;
+  }
+
+  .done-view {
+    padding-top: 80px;
+  }
+
+  .done-hero {
+    margin-bottom: 96px;
+  }
+
+  .done-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .done-hero p {
+    font-size: 1.25rem;
+  }
+
+  .summary-list {
+    gap: 44px;
+  }
+
+  .summary-estimate {
+    margin-top: 34px;
+    padding-top: 32px;
+  }
+
+  .done-actions {
+    margin-top: 58px;
+    gap: 18px;
+  }
+
+  .done-actions .btn {
+    height: 58px;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .rate-grid,
+  .done-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-right {
+    text-align: left;
+  }
+
+  .timer {
+    font-size: 3.15rem;
+  }
+}
