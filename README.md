@@ -1,6 +1,6 @@
 # 实时时薪计算器
 
-English version: [README.en.md](./README.en.md)
+## English Version: [README.en.md](./README.en.md)
 
 一个用来记录当天工作时长、计算时薪和下班结果的小型静态网页。
 
