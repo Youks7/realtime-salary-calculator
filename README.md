@@ -1,6 +1,8 @@
 # 实时时薪计算器
 
-## English Version: [README.en.md](./README.en.md)
+<h3 align="center">
+  <a href="./README.en.md">English README</a>
+</h3>
 
 一个用来记录当天工作时长、计算时薪和下班结果的小型静态网页。
 
@@ -80,7 +82,8 @@ https://github.com/Youks7/realtime-salary-calculator
 ├── index.html   页面结构
 ├── styles.css   页面样式
 ├── app.js       计时、计算和按钮逻辑
-└── README.md    项目说明
+├── README.md    中文项目说明
+└── README.en.md 英文项目说明
 ```
 
 ## 本地运行
